@@ -1,8 +1,22 @@
+<<<<<<< Updated upstream
+=======
+using Bulkybook.Data;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+
+>>>>>>> Stashed changes
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+<<<<<<< Updated upstream
 
+=======
+builder.Services.AddRazorPages();
+builder.Services.AddDbContext<ApplicationdbContext>(options => options.UseSqlServer(
+     builder.Configuration.GetConnectionString("DefaultConnection")
+    ));
+>>>>>>> Stashed changes
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
